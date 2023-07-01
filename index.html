@@ -15,11 +15,17 @@
         const message = {
             "message": "harsh"
         };
+        socket.on('join', () => {
+            console.log(message.message);
+        });
         
         socket.on('events',message)
         {
             console.log(message.message);
         };
+        socket.on('leave', () => {
+            
+        });
           
     </script>
 </body>
