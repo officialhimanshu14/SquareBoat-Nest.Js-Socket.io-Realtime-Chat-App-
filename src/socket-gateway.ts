@@ -26,4 +26,13 @@ export class GlaGateways implements OnGatewayInit, OnGatewayConnection, OnGatewa
   handleDisconnect(client: any) {
     console.log(`Client disconnected: ${client.id}`);
   }
+  @SubscribeMessage('join')
+  handleJoinRoom(client: any, room: string): void {
+    client.join(room);
+  }
+
+  @SubscribeMessage('leave')
+  handleLeaveRoom(client: any, room: string): void {
+    client.leave(room);
+  }
 }
