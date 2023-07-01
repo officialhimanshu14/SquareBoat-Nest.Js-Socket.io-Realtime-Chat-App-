@@ -1,0 +1,26 @@
+<!-- This is to just Test the code -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-Socket Calling</title>
+    <script src="https://cdn.socket.io/4.2.0/socket.io.min.js"></script>
+</head>
+<body>
+    <h1>Socket.io Example</h1>
+    <script>
+        const socket = io('http://localhost:3000');
+
+        const message = {
+            "message": "harsh"
+        };
+        
+        socket.on('events',message)
+        {
+            console.log(message.message);
+        };
+          
+    </script>
+</body>
+</html>
